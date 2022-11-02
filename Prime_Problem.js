@@ -1,18 +1,23 @@
-function isPrime(number){
-
+function checkPrime(number){
+	let factor=0;
 	for(let i=1; i<=number/2; i++){
-		if(number %2 == 0){
-			fact++;
+		if(number %i == 0){
+			factor++;
 		}
 	}
-	return fact;
+	
+if(factor==2){
+	return true;
+}
+return false;
+
 }
 
-let number "15";
+let number =15;
 
-let ans = isPrime(number);
-if(ans == 2){
-	console.log("Not Prime");
+let ans =checkPrime(number) ;
+if(ans == true){
+	console.log("prime");
 }else{
-	console.log("Prime");
+	console.log("Not a Prime");
 }
